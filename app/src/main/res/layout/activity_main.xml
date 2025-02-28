@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradient_background"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:gravity="center"
+            android:text="3 EN 1"
+            android:textColor="#4396EB"
+            android:textSize="48sp" />
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:columnCount="2"
+            android:padding="16dp"
+            android:rowCount="2">
+
+            <Button
+                android:id="@+id/btnCalculadora"
+                style="@style/BotonEstilo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnSpan="2"
+                android:layout_gravity="center"
+                android:text="Calculadora" />
+
+            <Button
+                android:id="@+id/btnPromedio"
+                style="@style/BotonEstilo"
+                android:layout_columnSpan="1"
+                android:text="Promedio" />
+
+            <Button
+                android:id="@+id/btnDescuento"
+                style="@style/BotonEstilo"
+                android:layout_columnSpan="1"
+                android:text="Descuento" />
+
+        </GridLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
