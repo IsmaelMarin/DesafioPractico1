@@ -7,19 +7,175 @@
     android:layout_height="match_parent"
     tools:context=".Calculadora">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteX="25dp"
-        tools:layout_editor_absoluteY="177dp">
+
+    <ImageButton
+        android:id="@+id/btnReturn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/returnrow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="124dp"
+        android:layout_marginBottom="48dp"
+        android:fontFamily="monospace"
+        android:text="Calculadora"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/edtA"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvRespuesta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="29dp"
+        android:fontFamily="monospace"
+        android:text="."
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/btnOperacion"
+        app:layout_constraintTop_toBottomOf="@+id/gridLayout" />
+
+    <TextView
+        android:id="@+id/tvRespuesta2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:fontFamily="monospace"
+        android:text="."
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnOperacion2"
+        app:layout_constraintStart_toEndOf="@+id/btnOperacion2" />
+
+    <TextView
+        android:id="@+id/tvOperador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="80dp"
+        android:layout_marginBottom="68dp"
+        android:fontFamily="monospace"
+        android:text="."
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnOperacion"
+        app:layout_constraintEnd_toEndOf="@+id/edtB" />
+
+    <Button
+        android:id="@+id/btnOperacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Calcular"
+        app:layout_constraintBottom_toBottomOf="@+id/tvRespuesta"
+        app:layout_constraintStart_toStartOf="@+id/edtB" />
+
+    <Button
+        android:id="@+id/btnOperacion2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="20dp"
+        android:text="Calcular"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtRaiz" />
+
+
+    <EditText
+        android:id="@+id/edtA"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginEnd="43dp"
+        android:layout_marginBottom="13dp"
+        android:ems="10"
+        android:hint="Coeficiente a"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/tvOperador"
+        app:layout_constraintEnd_toStartOf="@+id/gridLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/gridLayout"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/edtB"
+        android:layout_width="163dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="41dp"
+        android:layout_marginBottom="43dp"
+        android:ems="10"
+        android:hint="coeficiente b"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/tvRespuesta"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtA"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <EditText
+        android:id="@+id/edtRaiz"
+        android:layout_width="0dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="236dp"
+        android:ems="10"
+        android:hint="Raiz Cuadrada"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="177dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="173dp"
+        android:columnCount="2"
+        android:rowCount="3"
+        app:layout_constraintBottom_toBottomOf="@+id/edtRaiz"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/edtA"
+        app:layout_constraintTop_toTopOf="parent">
 
         <Button
-            android:id="@+id/button"
-            android:layout_width="match_parent"
+            android:id="@+id/btnSumar"
+            android:text="+" />
+
+        <Button
+            android:id="@+id/btnRestar"
+            android:text="-" />
+
+        <Button
+            android:id="@+id/btnMultiplicar"
+            android:text="x" />
+
+        <Button
+            android:id="@+id/btnDividir"
+            android:text="/" />
+
+        <Button
+            android:id="@+id/btnPotencia"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Button" />
+            android:layout_columnSpan="2"
+            android:layout_gravity="center_horizontal"
+            android:text="^" />
 
+    </GridLayout>
 
-    </LinearLayout>
+    <ImageButton
+        android:id="@+id/ibLimpiar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="47dp"
+        android:layout_marginEnd="33dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/update" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
