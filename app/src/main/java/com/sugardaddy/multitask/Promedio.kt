@@ -38,7 +38,7 @@ class Promedio : AppCompatActivity() {
 
         edtNombre= findViewById(R.id.edtNombre)
         spnDesplegable = findViewById(R.id.desplegable)
-        edtNumero = findViewById(R.id.edtNota)
+        edtNumero = findViewById(R.id.edtDescuento)
         btnGuardar = findViewById(R.id.btnGuardar)
         btnResultado = findViewById(R.id.btnResultado)
         tvResultado= findViewById(R.id.tvResultado)
